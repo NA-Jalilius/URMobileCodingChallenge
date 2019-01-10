@@ -1,7 +1,14 @@
-# URMobileCodingChallenge
+# URMobileCodingChallenge 💪 ✨
+
 This is a challenge, part of internship application process at United Remote.
 
-More info about the project refer to :
+# Technologies used 🔧 🔨
+
+The mobile platform : Android, using Java.
+
+# About the project ❗️ 👇
+
+More info about the idea of the project refer to :
 https://github.com/hiddenfounders/mobile-coding-challenge
 
 As a REST client for my application I used Retrofit, which is an open source java library which can be used as web service client API. It helps construct web service access url,  send the request to web service by numerous HTTP method such as GET, POST, DELETE etc.It can send parameters such as url query string or html form fields value to web server also.
@@ -12,5 +19,11 @@ For more information about the Retrofit library, please refer to  : https://gith
 
 For my REST client, I've used Restrofit synchronus request to get the data. Althought we can use asynchronus requests also !
 
-A picture of the app execution :
+# A picture of the app execution 😄
+
+# And the chosen symbolic Icon was (You can guess what the abrv. UR MCC stands for 😏 )
+
+<p>
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "130" height = "130"/>
+</p>
 
