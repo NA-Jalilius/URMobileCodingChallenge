@@ -23,5 +23,7 @@ A picture of the app execution :
 
 And the chosen symbolic Icon was (You can guess what the abrv. stands for :D )
 
-![alt text] (../master/app/src/main/ic_launcher_icone-web.png "My Icon")
+<p>
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" />
+</p>
 
