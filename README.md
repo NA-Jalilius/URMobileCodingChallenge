@@ -24,6 +24,6 @@ A picture of the app execution :
 And the chosen symbolic Icon was (You can guess what the abrv. stands for :D )
 
 <p>
-    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" />
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "75" height = "75"/>
 </p>
 
