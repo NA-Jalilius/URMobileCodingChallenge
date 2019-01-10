@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -19,6 +21,7 @@ import java.util.List;
 import abdeljalil.nadif.urmobilecodingchallenge.adapter.MyAdapter;
 import abdeljalil.nadif.urmobilecodingchallenge.controller.RetrofitController;
 import abdeljalil.nadif.urmobilecodingchallenge.model.Repo;
+import abdeljalil.nadif.urmobilecodingchallenge.service.ILoadMore;
 
 public class TrendsActivity extends AppCompatActivity {
 
@@ -61,7 +64,44 @@ public class TrendsActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_trending:
-                    Toast.makeText( getBaseContext(), "Hello there 1 :p", Toast.LENGTH_SHORT).show();
+                    showProgressDialog();
+                    createAPI(String.valueOf(page));
+
+                    repoList = RetrofitController.getAllRepos().getRepos();
+
+                    RecyclerView recyclerView = (RecyclerView) findViewById(R.id.listRepos);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(main));
+                    hideProgressDialog();
+
+                    myAdapter = new MyAdapter(recyclerView, main, repoList);
+                    recyclerView.setAdapter(myAdapter);
+                    myAdapter.setLoadMore(new ILoadMore() {
+                        @Override
+                        public void onLoadMore() {
+                            if(repoList.size() <= 100){
+                                repoList.add(null);
+                                myAdapter.notifyItemInserted(repoList.size()-1);
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        repoList.remove(repoList.size() - 1);
+                                        myAdapter.notifyItemRemoved(repoList.size());
+
+                                        //Load more data
+                                        page ++;
+                                        createAPI(String.valueOf(page));
+                                        repoList.addAll(RetrofitController.getAllRepos().getRepos());
+                                        myAdapter.notifyDataSetChanged();
+                                        myAdapter.setLoaded();
+                                        System.out.println(" \n\n\n The page now == " + page);
+                                    }
+                                },2000);
+                            }else{
+                                Toast.makeText( main, "Data loading completed!", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                    System.out.println(" \n\n\n The page now == " + page);
                     return true;
                 case R.id.navigation_settings:
                     Toast.makeText( getBaseContext(), "Hello there, Under development :p", Toast.LENGTH_SHORT).show();
