@@ -30,7 +30,7 @@ For my REST client, I've used Restrofit synchronus request to get the data. Alth
 ## And the chosen symbolic Icon was (You can guess what the abbr. "UR MCC" stands for 😏 )
 
 a hint maybe 😏 ? 
-United Remote Mobile Coding Challenge 📱👊
+it's United Remote Mobile Coding Challenge 😄😄 📱👊
 
 <p>
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "130" height = "130"/>
