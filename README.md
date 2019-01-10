@@ -21,7 +21,7 @@ And I would like to thank the developers team that offer us this library 👍�
 
 For my REST client, I've used Restrofit synchronus request to get the data. Althought we can use asynchronus requests also !
 
-## Some pictures of the app execution 😄
+## Some pictures of the app running 😄
 <p>
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/all_repos_view.png" />
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/first_view.png" />
