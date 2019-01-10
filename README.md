@@ -1,7 +1,12 @@
 # URMobileCodingChallenge
+
 This is a challenge, part of internship application process at United Remote.
 
-More info about the project refer to :
+# Technologies used
+
+The mobile platform : Android, using Java.
+
+More info about the idea of the project refer to :
 https://github.com/hiddenfounders/mobile-coding-challenge
 
 As a REST client for my application I used Retrofit, which is an open source java library which can be used as web service client API. It helps construct web service access url,  send the request to web service by numerous HTTP method such as GET, POST, DELETE etc.It can send parameters such as url query string or html form fields value to web server also.
