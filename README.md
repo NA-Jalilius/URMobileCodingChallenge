@@ -19,9 +19,9 @@ For more information about the Retrofit library, please refer to  : https://gith
 
 For my REST client, I've used Restrofit synchronus request to get the data. Althought we can use asynchronus requests also !
 
-A picture of the app execution :
+# A picture of the app execution :
 
-And the chosen symbolic Icon was (You can guess what the abrv. stands for :D )
+# And the chosen symbolic Icon was (You can guess what the abrv. UR MCC stands for 😏 )
 
 <p>
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "75" height = "75"/>
