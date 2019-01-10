@@ -6,6 +6,8 @@ This is a challenge, part of internship application process at United Remote.
 
 The mobile platform : Android, using Java.
 
+# About the project
+
 More info about the idea of the project refer to :
 https://github.com/hiddenfounders/mobile-coding-challenge
 
@@ -18,4 +20,7 @@ For more information about the Retrofit library, please refer to  : https://gith
 For my REST client, I've used Restrofit synchronus request to get the data. Althought we can use asynchronus requests also !
 
 A picture of the app execution :
+
+And the chosen symbolic Icon was (You can guess what the abrv. stands for :D )
+https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png
 
