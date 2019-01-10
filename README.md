@@ -1,6 +1,6 @@
 # URMobileCodingChallenge 💪 ✨
 
-This is a challenge, part of internship application process at United Remote.
+This is in response to a challenge, part of internship application process at United Remote (formerly Hidden Founders).
 
 # Technologies used 🔧 🔨
 
