@@ -1,12 +1,12 @@
-## URMobileCodingChallenge 💪 ✨
+# URMobileCodingChallenge 💪 ✨
 
 This is in response to a challenge, part of internship application process at United Remote (formerly Hidden Founders).
 
-# Technologies used 🔧 🔨
+## Technologies used 🔧 🔨
 
 The mobile platform : Android, using Java.
 
-# About the project ❗️ 👇
+## About the project ❗️ 👇
 
 More info about the idea of the project refer to :
 https://github.com/hiddenfounders/mobile-coding-challenge
@@ -17,15 +17,17 @@ When the web service return data to client, it can use data converter to parse o
 
 For more information about the Retrofit library, please refer to  : https://github.com/square/retrofit
 
+And I would like to thank the developers team that offer us this library 👍😍
+
 For my REST client, I've used Restrofit synchronus request to get the data. Althought we can use asynchronus requests also !
 
-# Some pictures of the app execution 😄
+## Some pictures of the app execution 😄
 <p>
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/all_repos_view.png" />
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/first_view.png" />
 </p>
 
-# And the chosen symbolic Icon was (You can guess what the abbr. "UR MCC" stands for 😏 )
+## And the chosen symbolic Icon was (You can guess what the abbr. "UR MCC" stands for 😏 )
 
 <p>
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "130" height = "130"/>
