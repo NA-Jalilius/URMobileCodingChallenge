@@ -23,7 +23,6 @@ For my REST client, I've used Restrofit synchronus request to get the data. Alth
 
 ## Some pictures of the app running 😄
 <p>
-    
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/first_view.png" />
     <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/all_repos_view.png" />
 </p>
