@@ -24,6 +24,6 @@ For my REST client, I've used Restrofit synchronus request to get the data. Alth
 # And the chosen symbolic Icon was (You can guess what the abrv. UR MCC stands for 😏 )
 
 <p>
-    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "75" height = "75"/>
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/ic_launcher_icone-web.png" width = "115" height = "115"/>
 </p>
 
