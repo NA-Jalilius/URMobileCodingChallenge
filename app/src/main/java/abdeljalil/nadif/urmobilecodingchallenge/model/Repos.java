@@ -11,6 +11,10 @@ import lombok.NoArgsConstructor;
 
 //@AllArgsConstructor @Data @NoArgsConstructor
 
+
+/**
+ * POJO that'll contain all the repos of one page (a list of repos)
+ */
 public class Repos {
 
     @Expose

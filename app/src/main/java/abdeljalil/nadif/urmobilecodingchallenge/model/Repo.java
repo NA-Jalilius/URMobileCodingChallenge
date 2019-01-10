@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 
 //@AllArgsConstructor @Data @NoArgsConstructor
 
+/**
+ * POJO of one Repo
+ */
+
 public class Repo {
     @Expose
     @SerializedName("name")

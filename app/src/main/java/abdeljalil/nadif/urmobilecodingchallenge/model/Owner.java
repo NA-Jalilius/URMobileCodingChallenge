@@ -3,6 +3,10 @@ package abdeljalil.nadif.urmobilecodingchallenge.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * POJO of the owner of the repo
+ */
+
 public class Owner {
     @Expose
     @SerializedName("login")

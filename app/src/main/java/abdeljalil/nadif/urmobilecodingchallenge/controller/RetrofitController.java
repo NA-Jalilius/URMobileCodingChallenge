@@ -18,9 +18,13 @@ import abdeljalil.nadif.urmobilecodingchallenge.service.ApiService;
 
 public class RetrofitController implements Callback<Repos>  {
 
+
+    /**
+     * The base URL of the github API
+     */
     static final String BASE_URL = "https://api.github.com/";
-    static Repos allRepos;
-    static Retrofit retrofit;
+    static public Repos allRepos;
+    static public Retrofit retrofit;
 
     public static void setAllRepos(Repos allRepos) {
         RetrofitController.allRepos = allRepos;
@@ -44,7 +48,12 @@ public class RetrofitController implements Callback<Repos>  {
         ApiService apiService = RetrofitController.createService(ApiService.class);
 
         Call<Repos> call = apiService.getRepos("created:>2017-10-22","stars","desc", page);
-
+        /**
+         *  I've tested also the asynchronous call of the Retrofit client
+         *  using call.enqueue(this), that'll use the two functions bellow
+         *  onResponse and or onFailure
+         *  But I've chosen to work with the synchronous call instead using call.execute().body();
+         */
         //call.enqueue(this);
         try {
             Repos reposLis = call.execute().body();
@@ -67,14 +76,14 @@ public class RetrofitController implements Callback<Repos>  {
         }
     }
 
-    public static <S> S createService(
-            Class<S> serviceClass) {
-        return retrofit.create(serviceClass);
-    }
-
     @Override
     public void onFailure(Call<Repos> call, Throwable t) {
         t.printStackTrace();
+    }
+
+    public static <S> S createService(
+            Class<S> serviceClass) {
+        return retrofit.create(serviceClass);
     }
 }
 

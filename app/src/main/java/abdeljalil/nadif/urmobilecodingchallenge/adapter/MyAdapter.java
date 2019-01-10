@@ -25,6 +25,10 @@ import abdeljalil.nadif.urmobilecodingchallenge.R;
 import abdeljalil.nadif.urmobilecodingchallenge.model.Repo;
 import abdeljalil.nadif.urmobilecodingchallenge.service.ILoadMore;
 
+/**
+ * This LoadingViewHolder Class will load get the progressBar view when loading next pages
+ */
+
 class LoadingViewHolder extends RecyclerView.ViewHolder{
     public ProgressBar progressBar;
 
@@ -33,6 +37,10 @@ class LoadingViewHolder extends RecyclerView.ViewHolder{
         progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar);
     }
 }
+
+/**
+ * This Item View Holder will set the view that contains the information about each repo
+ */
 
 class ItemViewHolder extends RecyclerView.ViewHolder{
     public TextView repoName, repoDesc, repoOwner, repoStars;
@@ -47,6 +55,10 @@ class ItemViewHolder extends RecyclerView.ViewHolder{
         repoOwnerAvatar = (ImageView) itemView.findViewById(R.id.ownerAvatar);
     }
 }
+
+/**
+ * The adapter that'll add the new view to our Recycler View
+ */
 
 public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private final int VIEW_TYPE_ITEM = 0, VIEW_TYPE_LOADING = 1;
@@ -126,6 +138,13 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void setLoaded() {
         isLoading = false;
     }
+
+    /**
+     * Images are received as an URL, so with the getImageBitmap we'll convert them
+     * to extract bitmap images and add them to the view
+     * @param url
+     * @return a bitmap image that will be set to the imageView
+     */
 
     private Bitmap getImageBitmap(String url) {
         Bitmap bm = null;
