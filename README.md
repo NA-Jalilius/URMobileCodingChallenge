@@ -1,4 +1,4 @@
-# URMobileCodingChallenge 💪 ✨
+## URMobileCodingChallenge 💪 ✨
 
 This is in response to a challenge, part of internship application process at United Remote (formerly Hidden Founders).
 
@@ -21,8 +21,8 @@ For my REST client, I've used Restrofit synchronus request to get the data. Alth
 
 # Some pictures of the app execution 😄
 <p>
-    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/All%20repos%20View.png" />
-    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/First%20View.png" />
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/all_repos_view.png" />
+    <img src="https://github.com/NA-Jalilius/URMobileCodingChallenge/blob/master/app/src/main/res/drawable/first_view.png" />
 </p>
 
 # And the chosen symbolic Icon was (You can guess what the abbr. "UR MCC" stands for 😏 )
