@@ -93,7 +93,6 @@ public class TrendsActivity extends AppCompatActivity {
                                         repoList.addAll(RetrofitController.getAllRepos().getRepos());
                                         myAdapter.notifyDataSetChanged();
                                         myAdapter.setLoaded();
-                                        System.out.println(" \n\n\n The page now == " + page);
                                     }
                                 },2000);
                             }else{
@@ -101,7 +100,6 @@ public class TrendsActivity extends AppCompatActivity {
                             }
                         }
                     });
-                    System.out.println(" \n\n\n The page now == " + page);
                     return true;
                 case R.id.navigation_settings:
                     Toast.makeText( getBaseContext(), "Hello there, Under development :p", Toast.LENGTH_SHORT).show();
@@ -144,16 +142,15 @@ public class TrendsActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 navigationView = (BottomNavigationView) findViewById(R.id.navigation);
                 navigationView.setSelectedItemId(R.id.navigation_trending);
-                Toast.makeText(getApplicationContext(), "The repositories are loading ... ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getBaseContext(), "The repositories are loading ... ", Toast.LENGTH_SHORT).show();
             }
         });
         builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getApplicationContext(), "It's OK, our app is always here for you when you'll need it\n" +
+                Toast.makeText(getBaseContext(), "It's OK, our app is always here for you when you'll need it\n" +
                         "See you next time !", Toast.LENGTH_SHORT).show();
                 finish();
-                System.exit(0);
             }
         });
         builder.show();
