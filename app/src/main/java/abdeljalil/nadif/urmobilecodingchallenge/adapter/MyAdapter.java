@@ -122,7 +122,7 @@ public class MyAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             viewHolder.repoName.setText(repos.get(position).getName());
             viewHolder.repoDesc.setText(repos.get(position).getDescription());
             viewHolder.repoOwner.setText(repos.get(position).getOwner().getName());
-            //viewHolder.repoOwnerAvatar.setImageBitmap( getImageBitmap(repos.get(position).getOwner().getAvatar()));
+                viewHolder.repoOwnerAvatar.setImageBitmap( getImageBitmap(repos.get(position).getOwner().getAvatar()));
             double nbr = repos.get(position).getNumberStars()/1000.00;
             String stars = nbr >= 1 ? (String.valueOf(nbr)+" k") : String.valueOf(repos.get(position).getNumberStars());
             viewHolder.repoStars.setText(stars);

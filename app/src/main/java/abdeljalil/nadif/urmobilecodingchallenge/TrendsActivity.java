@@ -1,26 +1,54 @@
 package abdeljalil.nadif.urmobilecodingchallenge;
 
+import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import abdeljalil.nadif.urmobilecodingchallenge.adapter.MyAdapter;
+import abdeljalil.nadif.urmobilecodingchallenge.controller.RetrofitController;
+import abdeljalil.nadif.urmobilecodingchallenge.model.Repo;
 
 public class TrendsActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
     private BottomNavigationView navigationView;
+    private RecyclerView recyclerView;
+    private MyAdapter myAdapter;
+    public ProgressDialog progressDialog;
+    public RetrofitController controller;
+    public List<Repo> repoList = new ArrayList<>();
+    public Activity main;
+
+    public static int page = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trends);
         getSupportActionBar().setSubtitle("Github Trending Repos");
+        main = this;
+        progressDialog = new ProgressDialog(main);
 
+        /**
+         * Added just so we can make some network calls in the main application thread
+         * Yet it's not a good pratice, better make these calls in a separate thread
+         */
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        recyclerView = (RecyclerView) findViewById(R.id.listRepos);
         informDialog();
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
@@ -42,6 +70,29 @@ public class TrendsActivity extends AppCompatActivity {
             return false;
         }
     };
+
+    private void createAPI(String page){
+        controller = new RetrofitController();
+        controller.start(page);
+    }
+
+    /* Show progress dialog. */
+    public void showProgressDialog()
+    {
+        // Set progress dialog display message.
+        progressDialog.setMessage("Please Wait");
+        // The progress dialog can not be cancelled.
+        progressDialog.setCancelable(false);
+        // Show it.
+        progressDialog.show();
+    }
+
+    /* Hide progress dialog. */
+    public void hideProgressDialog()
+    {
+        // Close it.
+        progressDialog.hide();
+    }
 
     private void informDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
